@@ -1,0 +1,218 @@
+/*
+    The Daily Grind - Main Stylesheet
+    Color Palette: #4E342E (brown), #F5F5DC (cream), #6B8E23 (green)
+    Typography: Montserrat (headings), Open Sans (body)
+*/
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #F5F5DC;
+    color: #4E342E;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Typography Scale */
+h1 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+p, li, label, input, textarea {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background: #4E342E;
+    color: #F5F5DC;
+    padding: 1rem 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: #F5F5DC;
+    text-decoration: none;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+nav a:hover, nav a:focus {
+    color: #6B8E23;
+    outline: none;
+}
+
+/* Main Content Layout */
+main, .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(78,52,46,0.08);
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 2rem 0;
+    background: url('../assets/images/hero-coffee.jpg') no-repeat center center/cover;
+    color: #fff;
+    border-radius: 8px;
+}
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 8px #4E342E;
+}
+
+/* Call to Action Button */
+.cta, .btn {
+    display: inline-block;
+    background: #6B8E23;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.cta:hover, .btn:hover, .cta:focus, .btn:focus {
+    background: #4E342E;
+    outline: 2px solid #6B8E23;
+    outline-offset: 2px;
+}
+
+/* Highlights & Menu Layout */
+.highlights, .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.highlight, .menu-item {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(78,52,46,0.08);
+    padding: 1.5rem;
+    text-align: center;
+    min-width: 220px;
+    max-width: 320px;
+}
+.menu-item img, .highlight img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    background: #4E342E;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Accessibility */
+a:focus, button:focus, .cta:focus {
+    outline: 2px solid #6B8E23;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .highlights, .menu {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .highlight, .menu-item {
+        max-width: 100%;
+    }
+    main, .container {
+        width: 98%;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+    .highlights, .menu {
+        gap: 1rem;
+    }
+    .highlight, .menu-item {
+        padding: 1rem;
+    }
+    main, .container {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
